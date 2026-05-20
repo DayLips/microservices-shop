@@ -1,0 +1,128 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.env
+ENV/
+env.bak/
+venv.bak/
+
+# Airflow
+logs/
+airflow.db
+airflow.cfg
+unittests.cfg
+webserver_config.py
+*.pid
+airflow-webserver.pid
+airflow-scheduler.pid
+airflow-worker.pid
+airflow-monitor.pid
+airflow.cfg.bak
+
+# Docker
+*.log
+*.pid
+*.lock
+docker-compose.override.yml
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.~*
+.DS_Store
+.vscode/settings.json
+.idea/workspace.xml
+.project
+.pydevproject
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+ehthumbs.db
+*.bak
+
+# Secrets
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+.passwords
+.credentials
+.env.local
+.env.*.local
+*secret*
+*key*
+*password*
+
+# Logs and Databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Project specific
+dags/__pycache__/
+operators/__pycache__/
+config/__pycache__/
+plugins/__pycache__/
+*.pyc
+*.pyo
+
+# Data files
+*.csv
+*.xlsx
+*.parquet
+data/
+tmp/
+temp/
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# Airflow DAG files backup
+~$*
