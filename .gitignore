@@ -1,4 +1,3 @@
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,109 +19,65 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
-# Virtual Environment
-venv/
-.venv/
-env/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.pytest_cache/
+htmlcov/
 .env
+.venv
+env/
+venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Airflow
-logs/
-airflow.db
-airflow.cfg
-unittests.cfg
-webserver_config.py
-*.pid
-airflow-webserver.pid
-airflow-scheduler.pid
-airflow-worker.pid
-airflow-monitor.pid
-airflow.cfg.bak
-
-# Docker
-*.log
-*.pid
-*.lock
-docker-compose.override.yml
-.dockerignore
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.~*
-.DS_Store
-.vscode/settings.json
-.idea/workspace.xml
-.project
-.pydevproject
-
-# OS
-Thumbs.db
-.DS_Store
-desktop.ini
-ehthumbs.db
-*.bak
-
-# Secrets
-*.pem
-*.key
-*.crt
-*.p12
-*.pfx
-secrets/
-.passwords
-.credentials
-.env.local
-.env.*.local
-*secret*
-*key*
-*password*
-
-# Logs and Databases
-*.log
-*.sql
-*.sqlite
-*.db
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
+.spyderproject
+.spyproject
+.ropeproject
+/site
 .mypy_cache/
-.ruff_cache/
+.dmypy.json
+dmypy.json
+.DS_Store
+media/
+staticfiles/
+db.sqlite3
 
-# Jupyter Notebook
-.ipynb_checkpoints/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Project specific
-dags/__pycache__/
-operators/__pycache__/
-config/__pycache__/
-plugins/__pycache__/
-*.pyc
-*.pyo
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
 
-# Data files
-*.csv
-*.xlsx
-*.parquet
-data/
-tmp/
-temp/
+/cypress/videos/
+/cypress/screenshots/
 
-# Backup files
-*.backup
-*.bak
-*.old
-*.orig
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Airflow DAG files backup
-~$*
+*.tsbuildinfo
+.vscode
+celerybeat-schedule
+celerybeat-schedule-wal
+
+*.db
