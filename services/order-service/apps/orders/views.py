@@ -208,7 +208,7 @@ def is_valid_status_transaction(old_status: str, new_status: str) -> bool:
 
 
 @api_view(['GET'])
-@permission_classes[IsAuthenticatedCustom]
+@permission_classes([IsAuthenticatedCustom])
 def order_statistics(request):
     user_id = request.user_id
     orders = Order.objects.filter(user_id=user_id)
