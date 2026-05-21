@@ -1,9 +1,10 @@
+# ===== services/order-service/config/settings.py =====
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'cart-service-secret-key-change-in-production'
+SECRET_KEY = 'order-service-secret-key-change-in-production'
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
@@ -22,7 +23,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'apps.cart',
+    'apps.orders',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -36,7 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'apps.cart.middleware.JWTAuthenticationMiddleware',
+    # 'apps.orders.middleware.JWTAuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -60,7 +61,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.parent.parent / 'databases' / 'cart.db',
+        'NAME': BASE_DIR.parent.parent / 'databases' / 'order.db',
     }
 }
 
@@ -71,6 +72,8 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
     ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
 }
 
 CORS_ALLOWED_ORIGINS = [
@@ -92,6 +95,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Service URLs
 PRODUCT_SERVICE_URL = 'http://localhost:8001'
+CART_SERVICE_URL = 'http://localhost:8002'
 USER_SERVICE_URL = 'http://localhost:8004'
 
 # Redis settings
